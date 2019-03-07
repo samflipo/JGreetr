@@ -1,4 +1,4 @@
-;(function(global, $) {
+(function(global, $) {
     
     // 'new' an object
     var Greetr = function(firstName, lastName, language) {
@@ -35,8 +35,7 @@
         },
         
         validate: function() {
-            // check that is a valid language
-            // references the externally inaccessible 'supportedLangs' within the closure
+            // check that is a valid language references the externally inaccessible 'supportedLangs' within the closure
              if (supportedLangs.indexOf(this.language)  === -1) {
                 throw "Invalid language";   
              }
@@ -135,7 +134,7 @@
     // trick borrowed from jQuery so we don't have to use the 'new' keyword
     Greetr.init.prototype = Greetr.prototype;
     
-    // attach our Greetr to the global object, and provide a shorthand '$G' for ease our poor fingers
+    // attaching our Greetr to the global object, and provide a shorthand '$G' for ease our poor fingers
     global.Greetr = global.G$ = Greetr;
     
 }(window, jQuery));
